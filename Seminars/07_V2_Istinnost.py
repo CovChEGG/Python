@@ -18,5 +18,5 @@ for i in X:
             #     X[i], Y[j], Z[k], result), '\n')
             # # --int type--
             print('      ', int(left_part), '\t==\t ', int(right_part), '\t\t = ', int(result))
-            print("¬({0} ⋁ {1} ⋁ {2})\t==   ¬{0} ⋀ ¬{1} ⋀ ¬{2}\t Is {3}".format(
+            print('¬({0} ⋁ {1} ⋁ {2})\t==   ¬{0} ⋀ ¬{1} ⋀ ¬{2}\t Is {3}'.format(
                 int(X[i]), int(Y[j]), int(Z[k]), int(result)), '\n')
