@@ -4,13 +4,12 @@ def int_input(txt):
     while True:
         in_string=input('Введите '+ txt + ': ')
         if in_string.isdigit() == 1:
-            return int(in_string)
-        print('\n!!! Не корректный ввод!!! Попробуйте ещё, пожалуйста.\n')
+            in_int = int(in_string)
+            if in_int > 0:
+                return in_int
+        print('\n!!! Не корректный ввод натурального числа !!! Попробуйте ещё, пожалуйста.\n')
 
 
 N = int_input("натуральное число n")
-if N == 0:
-    print('Некорректный ввод натурального числа!!!')
-else:
-    slovar = {x: 3*x+1 for x in range(1, N+1)}
-    print(slovar)
+slovar = {x: 3*x+1 for x in range(1, N+1)}
+print(slovar)
