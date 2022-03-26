@@ -2,15 +2,19 @@ def colors(color):
     colors_dict = \
         {
             'r': 'red', 'red': 'r', 'к': 'r', 'красный': 'r',
-            'g': 'green', 'green': 'g', 'з': 'g', 'зеленый': 'g',
             'b': 'blue', 'blue': 'b', 'c': 'b', 'синий': 'b',
-            'p': 'purple', 'purple': 'p', 'ф': 'p', 'фиолетовый': 'p',
-            'o': 'orange', 'orange': 'o', 'о': 'o', 'оранжевый': 'o',
-            'y': 'yellow', 'yellow': 'y', 'ж': 'y', 'желтый': 'y', 'жёлтый': 'y'
+            'y': 'yellow', 'yellow': 'y', 'ж': 'y', 'желтый': 'y', 'жёлтый': 'y',
+            'p': 'purple', 'rb': 'purple', 'br': 'purple',
+            'purple': 'p', 'ф': 'p', 'фиолетовый': 'p',
+            'o': 'orange', 'ry': 'orange', 'yr': 'orange',
+            'orange': 'o', 'о': 'o', 'оранжевый': 'o',
+            'g': 'green', 'by': 'green', 'yb': 'green',
+            'green': 'g', 'з': 'g', 'зеленый': 'g'
         }
     if color in colors_dict:
         return colors_dict[color]
     return None
+
 
 def str_input_color(txt):
     while True:
@@ -25,11 +29,13 @@ def str_input_color(txt):
             else:
                 print('!!! Entered wrong color!!!')
         else:
-            print('!!! Wrong input, try again !!!')
-        print('(R)ed, (G)reen, (B)lue')
+            print('!!! Wrong input !!!')
+        print('Choose one from: (R)ed, (G)reen, (B)lue')
 
 
 print('Input two main colors to mix it')
 print('(R)ed, (G)reen, (B)lue')
-color1 = str_input_color('first color is')
-color2 = str_input_color('second color is')
+color1 = str_input_color('Input first color')
+color2 = str_input_color('Input second color')
+print(f'{colors(color1)} + {colors(color2)} = {colors(color1+color2)}')
+
