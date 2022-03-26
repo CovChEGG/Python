@@ -1,15 +1,14 @@
 def colors(color):
-    colors_dict = \
-        {
-            'r': 'red', 'red': 'r', 'к': 'r', 'красный': 'r',
-            'b': 'blue', 'blue': 'b', 'c': 'b', 'синий': 'b',
-            'y': 'yellow', 'yellow': 'y', 'ж': 'y', 'желтый': 'y', 'жёлтый': 'y',
-            'p': 'purple', 'rb': 'purple', 'br': 'purple',
-            'purple': 'p', 'ф': 'p', 'фиолетовый': 'p',
-            'o': 'orange', 'ry': 'orange', 'yr': 'orange',
-            'orange': 'o', 'о': 'o', 'оранжевый': 'o',
-            'g': 'green', 'by': 'green', 'yb': 'green',
-            'green': 'g', 'з': 'g', 'зеленый': 'g'
+    colors_dict = {
+        'r': 'red', 'red': 'r', 'к': 'r', 'красный': 'r',
+        'b': 'blue', 'blue': 'b', 'c': 'b', 'синий': 'b',
+        'y': 'yellow', 'yellow': 'y', 'ж': 'y', 'желтый': 'y', 'жёлтый': 'y',
+        'p': 'purple', 'rb': 'purple', 'br': 'purple',
+        'purple': 'p', 'ф': 'p', 'фиолетовый': 'p',
+        'o': 'orange', 'ry': 'orange', 'yr': 'orange',
+        'orange': 'o', 'о': 'o', 'оранжевый': 'o',
+        'g': 'green', 'by': 'green', 'yb': 'green',
+        'green': 'g', 'з': 'g', 'зеленый': 'g'
         }
     if color in colors_dict:
         return colors_dict[color]
@@ -19,7 +18,7 @@ def colors(color):
 def str_input_color(txt):
     while True:
         in_string = input(txt + ': ').lower().strip()
-        color_typed  = colors(in_string)
+        color_typed = colors(in_string)
         main_colors = ['r', 'y', 'b']
         if color_typed:
             if in_string in main_colors:
