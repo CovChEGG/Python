@@ -22,7 +22,7 @@ def str2dic(my_str):
             res[i[j + 1:]] = int(tmp_val + i[:j])
             tmp_val = ''
         elif 'x' in i:
-            res[i[j]] = 1
+            res[i[0:]] = 1
         elif i.isdigit():
             res['0'] = int(tmp_val + i)
         elif '=' == i:
